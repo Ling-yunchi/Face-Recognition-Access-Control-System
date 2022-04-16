@@ -17,4 +17,6 @@ public class User {
     @Id
     @Column(name = "id", nullable = false)
     private UUID id;
+    private String username;
+    private String password;
 }
