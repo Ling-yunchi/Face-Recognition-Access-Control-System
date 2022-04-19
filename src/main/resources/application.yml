@@ -11,3 +11,7 @@ spring:
   jpa:
     show-sql: true
     database: mysql
+
+baidu:
+  clientId: 'your_client_id'
+  clientSecret: 'your_client_secret'

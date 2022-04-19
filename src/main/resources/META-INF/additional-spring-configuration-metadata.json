@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "baidu.clientId",
+      "type": "java.lang.String",
+      "description": "Baidu OAuth2 Client ID."
+    },
+    {
+      "name": "baidu.clientSecret",
+      "type": "java.lang.String",
+      "description": "Baidu OAuth2 Client Secret."
+    }
+  ]
+}
