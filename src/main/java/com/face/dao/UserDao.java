@@ -2,12 +2,14 @@ package com.face.dao;
 
 import com.face.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  * @author wangrong
  * @date 2022/4/16 17:59
  */
-public interface UserDao extends JpaRepository<User, Long> {
+@Repository
+public interface UserDao extends JpaRepository<User, String> {
     /**
      * 根据用户名查询用户
      *

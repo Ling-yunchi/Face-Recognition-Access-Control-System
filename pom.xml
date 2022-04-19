@@ -60,6 +60,13 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!-- baiduFace -->
+        <dependency>
+            <groupId>com.baidu.aip</groupId>
+            <artifactId>java-sdk</artifactId>
+            <version>4.16.7</version>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
