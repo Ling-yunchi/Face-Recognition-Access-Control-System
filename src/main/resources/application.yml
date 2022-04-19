@@ -15,3 +15,4 @@ spring:
 baidu:
   clientId: 'your_client_id'
   clientSecret: 'your_client_secret'
+  secretKey: 'b163c905ca98609435ef4bcf8a9810e7409efc0542eb24cdfeadce5480e80468'

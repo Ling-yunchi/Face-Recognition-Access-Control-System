@@ -9,6 +9,11 @@
       "name": "baidu.clientSecret",
       "type": "java.lang.String",
       "description": "Baidu OAuth2 Client Secret."
+    },
+    {
+      "name": "baidu.secretKey",
+      "type": "java.lang.String",
+      "description": "Baidu OAuth2 Secret Key."
     }
   ]
 }
