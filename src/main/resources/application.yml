@@ -12,6 +12,6 @@ spring:
     open-in-view: true
 
 baidu:
-  clientId: 'your_client_id'
-  clientSecret: 'your_client_secret'
-  secretKey: 'b163c905ca98609435ef4bcf8a9810e7409efc0542eb24cdfeadce5480e80468'
+  clientId: '26003518'
+  clientSecret: '9rwrbO5iLq99hZDTnxb6Y96p'
+  secretKey: 'TfS9Vptvpy0YLyiTy47btH06Kh7YBlD5'
