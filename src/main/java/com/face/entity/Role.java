@@ -4,6 +4,7 @@ import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.Objects;
 import java.util.Set;
 /**
  * @author uto
@@ -30,4 +31,22 @@ public class Role {
     @ToString.Exclude
     private Set<EquipmentGroup> groups;
 
+    // TODO: 检查equals与hashCode是否满足要求
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Role role = (Role) o;
+        return id.equals(role.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 }
