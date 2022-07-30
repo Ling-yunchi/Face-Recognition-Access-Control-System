@@ -25,6 +25,8 @@ public class Equipment {
     @Column(length = 64)
     private String id;
     private String name;
+    private String position;
+    private String status;
 
     @ManyToOne
     private EquipmentGroup group;
