@@ -2,6 +2,7 @@ package com.hitwh.device;
 
 import com.hitwh.device.engine.FaceDetectionEngine;
 import com.hitwh.device.model.DetectedFace;
+import com.hitwh.device.socket.Server;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfByte;
@@ -25,6 +26,8 @@ public class Device extends JFrame {
     }
 
     private JLabel detectStatus;
+    private JLabel serverStatus;
+    private Server server;
 
     private static VideoCapture capture;
     public JLabel videoPlayer;
@@ -36,10 +39,22 @@ public class Device extends JFrame {
         setLayout(new BorderLayout());
         setVisible(true);
 
+        JPanel header = new JPanel();
+        header.setLayout(new FlowLayout());
         detectStatus = new JLabel("人脸数量: 0");
-        detectStatus.setHorizontalAlignment(SwingConstants.CENTER);
+        detectStatus.setHorizontalAlignment(SwingConstants.LEFT);
         detectStatus.setVerticalAlignment(SwingConstants.CENTER);
-        getContentPane().add(detectStatus, BorderLayout.NORTH);
+        header.add(detectStatus);
+
+        serverStatus = new JLabel("服务器状态: 未连接");
+        serverStatus.setHorizontalAlignment(SwingConstants.RIGHT);
+        serverStatus.setVerticalAlignment(SwingConstants.CENTER);
+        header.add(serverStatus);
+
+        add(header, BorderLayout.NORTH);
+
+        server = new Server(8080, "123456");
+        server.start();
 
         capture = new VideoCapture();
         capture.open(0);
@@ -75,6 +90,8 @@ public class Device extends JFrame {
         @Override
         public void run() {
             while (true) {
+                serverStatus.setText("服务器状态: " + (server.getConnected() ? "已连接" : "未连接"));
+
                 Mat imgMat = new Mat();
                 capture.read(imgMat);
                 if (!imgMat.empty()) {
