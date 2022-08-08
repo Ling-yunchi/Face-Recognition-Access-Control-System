@@ -27,6 +27,9 @@ public class Equipment {
     private String name;
     private String position;
     private String status;
+    private String ip;
+    private Integer port;
+    private String privateKey;
 
     @ManyToOne
     private EquipmentGroup group;

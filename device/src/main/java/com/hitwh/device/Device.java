@@ -53,7 +53,7 @@ public class Device extends JFrame {
 
         add(header, BorderLayout.NORTH);
 
-        server = new Server(8080, "123456");
+        server = new Server(8888, "123456");
         server.start();
 
         capture = new VideoCapture();

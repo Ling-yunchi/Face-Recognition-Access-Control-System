@@ -11,6 +11,10 @@ spring:
     database: mysql
     open-in-view: true
 
+logging:
+  level:
+    com.hitwh.face: DEBUG
+
 baidu:
   clientId: '26003518'
   clientSecret: '9rwrbO5iLq99hZDTnxb6Y96p'
